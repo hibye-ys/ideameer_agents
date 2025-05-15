@@ -1,4 +1,4 @@
-# Ideameer Agents 
+# Ideameer Agents
 
 이 프로젝트는 FastAPI를 기반으로 하는 **Ideameer**의 에이전트 서버입니다. Ideameer는 아이디어 구상부터 관리, 창작 워크플로우까지 지원하는 웹 애플리케이션입니다.
 이 에이전트 서버는 Ideameer의 핵심 기능을 제공하고 확장하는 역할을 담당합니다.
@@ -16,7 +16,7 @@
 1.  **저장소 복제:**
 
     ```bash
-    git clone <repository-url>
+    git clone git remote add origin https://github.com/hibye-ys/ideameer_agents.git
     cd ideameer-agents # 또는 실제 프로젝트 폴더명
     ```
 
