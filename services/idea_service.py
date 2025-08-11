@@ -19,7 +19,7 @@ class IdeaService:
         self,
         user_id: str,
         chat_id: str,
-        chat_history: List[Dict[str, str]] = [],
+        chat_history: Optional[List[Dict[str, str]]] = None,
         prompt_text: str = "",
         referenced_ideas: Optional[List[str]] = None,
     ) -> AsyncGenerator[str, None]:
@@ -28,6 +28,11 @@ class IdeaService:
         )
         logger.debug(f"Prompt text: {prompt_text}")
         logger.debug(f"Referenced ideas: {referenced_ideas}")
+
+        # chat_history 기본값으로 빈 리스트를 사용하면 호출 간에 상태가 공유될 수
+        # 있으므로 None을 기본값으로 두고 여기서 초기화합니다.
+        if chat_history is None:
+            chat_history = []
 
         referenced_ideas_message = []
         if referenced_ideas:
